@@ -70,7 +70,8 @@ namespace Paint
             Rectangle rectangle = Screen.PrimaryScreen.Bounds; //Определяем при каком разрешении работает нашь пользователь
             map = new Bitmap(rectangle.Width, rectangle.Height); // И такое - же разрешение выставляем для Bitmap
             graphics = Graphics.FromImage(map);
-
+            pen.StartCap = System.Drawing.Drawing2D.LineCap.Round; // Добавляем эту строку что-бы линии были более сглаженные
+            pen.EndCap = System.Drawing.Drawing2D.LineCap.Round;   // Добавляем эту строку что-бы линии были более сглаженные
         }
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e) // Обработчик события нажатия левой кнопки мыши на pictureBox1
@@ -94,6 +95,11 @@ namespace Paint
                 pictureBox1.Image = map;
                 arrayPoints.SetPoint(e.X, e.Y);
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e) // Универсальная кнопка для смены цвета карандаша.
+        {
+            pen.Color = ((Button)sender).BackColor;
         }
     }
 }

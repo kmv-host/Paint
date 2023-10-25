@@ -41,8 +41,8 @@
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label1 = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -104,6 +104,7 @@
             this.button3.Size = new System.Drawing.Size(30, 30);
             this.button3.TabIndex = 4;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -114,6 +115,7 @@
             this.button4.Size = new System.Drawing.Size(30, 30);
             this.button4.TabIndex = 5;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
@@ -124,6 +126,7 @@
             this.button5.Size = new System.Drawing.Size(30, 30);
             this.button5.TabIndex = 6;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button3_Click);
             // 
             // button6
             // 
@@ -134,6 +137,7 @@
             this.button6.Size = new System.Drawing.Size(30, 30);
             this.button6.TabIndex = 7;
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button3_Click);
             // 
             // button7
             // 
@@ -144,6 +148,7 @@
             this.button7.Size = new System.Drawing.Size(30, 30);
             this.button7.TabIndex = 8;
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button3_Click);
             // 
             // button8
             // 
@@ -154,6 +159,7 @@
             this.button8.Size = new System.Drawing.Size(30, 30);
             this.button8.TabIndex = 9;
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button3_Click);
             // 
             // button9
             // 
@@ -164,6 +170,7 @@
             this.button9.Size = new System.Drawing.Size(30, 30);
             this.button9.TabIndex = 10;
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button3_Click);
             // 
             // button10
             // 
@@ -184,13 +191,6 @@
             this.panel1.Size = new System.Drawing.Size(142, 100);
             this.panel1.TabIndex = 4;
             // 
-            // trackBar1
-            // 
-            this.trackBar1.Location = new System.Drawing.Point(0, 52);
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(139, 45);
-            this.trackBar1.TabIndex = 0;
-            // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -200,6 +200,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Выбор толщины";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(0, 52);
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(139, 45);
+            this.trackBar1.TabIndex = 0;
             // 
             // Form1
             // 
