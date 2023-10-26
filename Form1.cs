@@ -101,5 +101,38 @@ namespace Paint
         {
             pen.Color = ((Button)sender).BackColor;
         }
+
+        private void button10_Click(object sender, EventArgs e) // Кнопка выбора дополнительной палитры цвета
+        {
+            if(colorDialog1.ShowDialog() == DialogResult.OK) //Вызываем нашcolorDialog1.ShowDialog() и если нажата кнопка вызова доп.палитры
+            {
+              pen.Color = colorDialog1.Color; // То собственно нашему карандашу присваиваем colorDialog1.Color
+                ((Button)sender).BackColor = colorDialog1.Color; // Эта строка нужна что бы мы видели какой цвет мы выбрали.
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e) // Метод обработчика кнопки Clear
+        {
+            graphics.Clear(pictureBox1.BackColor); // Очищаем graphics командой Clear и заполняем pictureBox1 фоновым цветом BackColor
+            pictureBox1.Image = map;               // изображение нашего pictureBox1 присвоили map
+        }
+
+        private void trackBar1_ValueChanged(object sender, EventArgs e) // Метод обработчика ValueChanged изменение толщины карандаша pen
+        {
+            pen.Width = trackBar1.Value; // толщине Width карандаша pen присваиваем текущее положение ползунка Value на trackBar1
+        }
+
+        private void button1_Click(object sender, EventArgs e) // метод обработчика кнопки Save
+        {
+            saveFileDialog1.Filter = "JPG(*.JPG)|*.jpg"; // Сохраняем картинку используя фильтр saveFileDialog1.Filter и сохраняем файл в формате JPG
+
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK) // Если нашь пользователь нажал ОК
+            {
+                if(pictureBox1.Image == null)  // то проверяем если pictureBox1.Image равен нулю
+                {
+                    pictureBox1.Image.Save(saveFileDialog1.FileName); // В наш pictureBox1 передаем метод Save в котором указываем путь сохранения (saveFileDialog1.FileName)
+                }
+            }
+        }
     }
 }
